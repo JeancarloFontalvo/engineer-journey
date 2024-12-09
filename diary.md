@@ -8,4 +8,13 @@
 - **Challenges Faced**: 😶
 - **Reflection**: 😶
 
+## [2024-12-09]
+
+- **Topic Learned**: Learned to blink leds on protoboard and bit counter. 📚
+- **What I did**:  
+    - lighting on and off the leds in sequential order
+    - use of arrays and loops to avoid code duplication and ease of manipulating sequence of leds
+- **Challenges Faced**: 😶
+- **Reflection**: 😶
+
 ---
