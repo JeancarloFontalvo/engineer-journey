@@ -17,4 +17,10 @@
 - **Challenges Faced**: 😶
 - **Reflection**: 😶
 
+- **Topic Learned**: Back and forth for leds. 📚
+- **What I did**:  
+    - Implemented a simple back and forth loop, that increases delay as per back and forth iteration, then it resets
+- **Challenges Faced**: 😶
+- **Reflection**: 😶
+
 ---
