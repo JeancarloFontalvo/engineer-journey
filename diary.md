@@ -1,3 +1,26 @@
+## [2024-12-31]
+
+- **Topic Learned**: Have first interaction with a OLED Screen  📚
+- **What I did**:  
+    - Tested and write some text in a small 128x32 OLED Screen I bought from aliexpress
+- **Challenges Faced**: 
+    - Understand binary format for image representation, SLC and SDA outputs
+- **Reflection**: 😶
+
+---
+
+## [2024-12-26]
+
+- **Topic Learned**: Learnt how to move a servo in arduino, with Servo and push button 📚
+- **What I did**:  
+    - Move a servo
+    - Incremental move when push btn is pressed and reset
+- **Challenges Faced**: 
+    - Understand EMI interference, when reading the input and pull down, pull up resistor schematics for draining unwanted floating signal
+- **Reflection**: Have to keep practicing reading inputs to masterize this topic
+
+---
+
 ## [2024-12-21]
 
 - **Topic Learned**: Have first interaction with CAD. 📚
