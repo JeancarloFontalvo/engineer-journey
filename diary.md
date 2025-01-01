@@ -1,3 +1,14 @@
+## [2025-01-01]
+
+- **Topic Learned**: Manipulating cursor sprite with potentiometer and displaying it in OLED Screen  📚
+- **What I did**:  
+    - Try to practice my current knowledge of 1 month of Electronics, by trying to move a cursor I made in ms paint, having a potentiometer and a push button for switching between x and y movement
+- **Challenges Faced**: 
+    - Understand that potentiomenter single input affects boths current x and y position, so make sense to use separate potentiometers for easy control and code implementation
+- **Reflection**: Still want to try to fix the single potentiometer control 😶
+
+---
+
 ## [2024-12-31]
 
 - **Topic Learned**: Have first interaction with a OLED Screen  📚
