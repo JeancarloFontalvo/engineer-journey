@@ -1,45 +1,60 @@
 # Learning tracker
 
-This is the control panel for the journey. Keep the active work small, write down new ideas instead of immediately switching to them, and use the diary for the details of each session.
+## Current quest: graphics programming
 
-## Current focus
+Start small and get something moving in a browser before worrying about engines or advanced APIs.
 
-> Keep this section to one main thread. If it changes, write the reason in `diary.md` and move the old work to **Next up** or **Backlog**.
+- [ ] Create a tiny JavaScript project that opens a canvas in a browser.
+- [ ] Draw pixels, rectangles, lines, and simple shapes.
+- [ ] Learn the animation loop and frame timing.
+- [ ] Add keyboard and mouse input.
+- [ ] Make one small 2D experiment or toy.
+- [ ] Write down what I understand and what I still do not understand in `diary.md`.
 
-- [ ] **First motorized mechanism** — connect the L298N experiment and holder design into one safe, repeatable build.
-  - [ ] Confirm the wiring and pin map, including a shared ground.
-  - [ ] Test forward, reverse, stop, and independent motor behavior.
-  - [ ] Add and verify PWM speed control; remove or explain unused settings in the sketch.
-  - [ ] Review `cad/02-holder.FCStd`, and record its purpose, dimensions, and next design change.
-  - [ ] Record the motor supply, driver behavior, and any problems in `diary.md`.
+### Suggested path
+
+1. JavaScript basics needed for the experiment
+2. HTML canvas and a render loop
+3. Coordinates, vectors, colors, and transforms
+4. Input and simple animation
+5. A small game-like or simulation-like project
+6. WebGL/WebGPU only when Canvas becomes limiting
+7. C or Rust later, if lower-level control or performance becomes useful
 
 ## Next up
 
-These are worthwhile follow-ups, but they should wait until the current focus has a useful stopping point.
-
-- [ ] Revisit the OLED cursor experiment and test whether one potentiometer can select/control both axes without making the input ambiguous.
-- [ ] Add a short README or wiring note to the more hardware-dependent Arduino experiments.
-- [ ] Build a small end-to-end project that combines a CAD part, an Arduino controller, and a motor or servo.
-- [ ] Practice diagnosing button inputs, pull resistors, floating signals, and electrical noise with deliberate tests.
+- [ ] Return to the L298N motor experiment and make the setup safe and repeatable.
+  - [ ] Confirm the wiring and pin map, including a shared ground.
+  - [ ] Test forward, reverse, stop, and independent motor behavior.
+  - [ ] Add and verify PWM speed control.
+  - [ ] Review `cad/02-holder.FCStd` and record its purpose, dimensions, and next design change.
+- [ ] Revisit the OLED cursor experiment and test one potentiometer controlling both axes.
+- [ ] Add short wiring notes to the hardware-dependent Arduino experiments.
 
 ## Backlog
 
-- [ ] Improve FreeCAD constraint and modeling workflow through another small, dimensioned part.
-- [ ] Compare motor-driver behavior at different loads and speeds, including power and heat considerations.
-- [ ] Review old sketches for clearer names, setup notes, and consistent comments.
-- [ ] Add photos or diagrams to experiments when they explain the physical setup better than code can.
+- [ ] Build a small project combining a CAD part, an Arduino controller, and a motor or servo.
+- [ ] Improve FreeCAD constraint and modeling workflow with another dimensioned part.
+- [ ] Learn more about 3D printing and design a part for printing.
+- [ ] Practice wiring and soldering on a small, documented circuit.
+- [ ] Explore energy harvesting with a simple measurable experiment.
+- [ ] Study physics simulation after getting a basic graphics loop working.
+- [ ] Study chemistry simulation after building enough math and modeling background.
+- [ ] Explore agentic coding through a small harness or repeatable coding workflow.
+- [ ] Review C and Rust when JavaScript experiments expose a useful reason to go lower level.
 
 ## Ideas parking lot
 
-Capture ideas here so they are not lost, but do not let them interrupt the current focus. Promote an idea to **Current focus** only when there is a concrete next action.
+Ideas go here so they are not lost without becoming the next distraction.
 
-- A more durable/useful motor project using a better motor and mechanical structure.
-- A richer OLED interface using the existing bitmap cursor and face assets.
-- More basic circuit studies, such as the NOT-gate schematic and resistor behavior.
+- A richer OLED interface using the existing cursor and face assets.
+- A more durable motor project with a better motor and mechanical structure.
+- Basic circuit studies, including the NOT-gate schematic and resistor behavior.
+- A browser-based physics toy.
+- A browser-based chemistry or particle visualization.
+- A small coding agent harness for one narrow development task.
 
 ## Session note template
-
-Copy this into [`diary.md`](diary.md) after a meaningful session:
 
 ```markdown
 ## [YYYY-MM-DD]
@@ -51,10 +66,10 @@ Copy this into [`diary.md`](diary.md) after a meaningful session:
 - **Next action**:
 ```
 
-## Tracking rules
+## Rules for staying focused
 
-1. Start a session by choosing one concrete next action.
-2. Keep new ideas in the parking lot instead of switching immediately.
-3. Mark work done only when it has been tested or documented.
-4. End with one next action, even if the experiment is blocked.
-5. Periodically archive completed items and promote only the most useful next thread.
+- Keep one current quest.
+- Put new ideas in the parking lot instead of switching immediately.
+- Mark work done only when it has been tested or documented.
+- End a session with one clear next action.
+- Move the current quest when the next step is no longer useful, not just because a new idea appeared.

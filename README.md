@@ -1,57 +1,51 @@
 # Engineer Journey
 
-A personal, hands-on learning lab for engineering—currently focused on **electronics, Arduino, and mechanical design with FreeCAD**. This repository contains experiments, sketches, schematics, CAD files, and the notes that explain what I learned along the way.
+My engineering diary and learning playground. I learn by building things, making mistakes, and keeping notes.
 
-The goal is progress through small, practical builds rather than polished production projects. Some experiments are intentionally incomplete or rough; that is part of the learning record.
+I am a generalist, so this map will probably grow over time.
 
-## Current focus
+## Current quest
 
-The active thread is bringing together simple Arduino motor control and mechanical design. The working checklist and ideas that are intentionally being deferred live in [`TODO.md`](TODO.md).
+**Graphics programming**
 
-## Repository map
+I want to start quickly with JavaScript in a web browser. The first tools will probably be Canvas and browser APIs. Node.js, C, or Rust can come later when there is a reason to use them.
 
-| Directory | Contents |
-| --- | --- |
-| [`electronics/arduino/`](electronics/arduino/) | Arduino exercises, from LED timing and buttons to servos, OLEDs, and motors |
-| [`electronics/schematics/`](electronics/schematics/) | Circuit notes and schematics |
-| [`cad/`](cad/) | FreeCAD designs and saved iterations |
-| [`graphics/`](graphics/) | Bitmap assets used by electronics experiments |
-| [`diary.md`](diary.md) | Dated learning notes, challenges, and reflections |
-| [`TODO.md`](TODO.md) | Current focus, next actions, backlog, and ideas parking lot |
+- [Learning map](learning-map.md)
+- [Current notes and TODOs](TODO.md)
+- [Diary](diary.md)
 
-## Learning path so far
+## Interests
 
-- Arduino fundamentals: blinking LEDs, loops, arrays, and non-blocking timing
-- Digital inputs: push buttons, pull-up/pull-down resistors, and floating signals
-- Servos: position control and button-driven movement
-- OLED display: text, bitmap graphics, and a cursor controlled by inputs
-- Motor control: first experiments with an L298N motor driver
-- CAD: constrained sketches and early mechanical parts in FreeCAD
+- Graphics programming ⭐ **current focus**
+- Electronics and low-level programming
+- Mechanics
+- CAD
+- 3D printing and 3D modeling
+- Chemistry
+- Physics
+- Wiring, wire modeling, and soldering
+- Energy harvesting
+- Agentic coding, coding harnesses, and agentic patterns
+- C and Rust
+- Physics simulation
+- Chemistry simulation
 
-The experiments are available in the numbered sketches under [`electronics/arduino/`](electronics/arduino/). The diary provides the context behind them and records questions to revisit.
+## What is here
 
-## How to use this repository
+- [`electronics/arduino/`](electronics/arduino/) — Arduino experiments
+- [`electronics/schematics/`](electronics/schematics/) — circuit notes and schematics
+- [`cad/`](cad/) — FreeCAD designs
+- [`graphics/`](graphics/) — bitmap assets for graphics experiments
+- [`diary.md`](diary.md) — dated learning notes
+- [`TODO.md`](TODO.md) — current quest, backlog, and ideas
+- [`learning-map.md`](learning-map.md) — RPG-style map of the interests
 
-1. Choose one item from [`TODO.md`](TODO.md), preferably from **Current focus**.
-2. Open the relevant Arduino sketch in the Arduino IDE, or the CAD file in FreeCAD.
-3. Record the wiring, hardware, assumptions, and result—not just the final code or model.
-4. Add a short dated entry to [`diary.md`](diary.md), including what worked, what was confusing, and the next action.
-5. Update [`TODO.md`](TODO.md) before changing focus so unfinished work and new ideas do not get lost.
+## Things I have tried so far
 
-Arduino sketches are hardware-specific experiments. Check the pin assignments and power requirements before connecting a circuit; motor projects in particular need a suitable external supply and a shared ground with the controller.
-
-## Documentation habits
-
-Each experiment should aim to leave behind:
-
-- a small, understandable sketch or model;
-- a wiring diagram, schematic, or useful photo when applicable;
-- the important hardware and library assumptions;
-- a short reflection in the diary; and
-- one clear next step.
-
-This keeps the repository useful as both a reference and a record of how the understanding developed.
-
-## License
-
-No license has been selected yet. Treat the contents as personal learning material unless a license is added.
+- Arduino basics, LEDs, loops, arrays, and non-blocking timing
+- Buttons, pull-up/pull-down resistors, and floating inputs
+- Servos
+- OLED text and bitmap graphics
+- A cursor controlled by potentiometers
+- An early L298N motor-driver experiment
+- Constrained sketches and early parts in FreeCAD
