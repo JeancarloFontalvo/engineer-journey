@@ -52,6 +52,7 @@ Ideas go here so they are not lost without becoming the next distraction.
 - Basic circuit studies, including the NOT-gate schematic and resistor behavior.
 - A browser-based physics toy.
 - A browser-based chemistry or particle visualization.
+- Build an **Engineer Journey RPG** as a graphics/web project: JavaScript in the browser with Canvas, SVG, or HTML; dynamically generate skills and mastery stars from repository data. Try building it myself before delegating implementation.
 - A small coding agent harness for one narrow development task.
 
 ## Session note template
