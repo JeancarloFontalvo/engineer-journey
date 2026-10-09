@@ -11,6 +11,7 @@ I am a generalist, so this map will probably grow over time.
 I want to start quickly with JavaScript in a web browser. The first tools will probably be Canvas and browser APIs. Node.js, C, or Rust can come later when there is a reason to use them.
 
 - [Learning map](learning-map.md)
+- [Learning backlog](learning-backlog.md)
 - [Current notes and TODOs](TODO.md)
 - [Diary](diary.md)
 

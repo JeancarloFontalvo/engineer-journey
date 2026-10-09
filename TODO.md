@@ -1,5 +1,7 @@
 # Learning tracker
 
+This file is the refined, actionable backlog. Raw learning themes and ideas that are not ready to become tasks live in the [learning backlog](learning-backlog.md).
+
 ## Current quest: graphics programming
 
 Start small and get something moving in a browser before worrying about engines or advanced APIs.
@@ -38,7 +40,7 @@ Start small and get something moving in a browser before worrying about engines 
 - [ ] Learn more about 3D printing and design a part for printing.
 - [ ] Practice wiring and soldering on a small, documented circuit.
 - [ ] Explore energy harvesting with a simple measurable experiment.
-- [ ] Study physics simulation after getting a basic graphics loop working.
+- [ ] Study physics simulation after getting a basic graphics loop working; use the [learning backlog](learning-backlog.md) as the long-term roadmap.
 - [ ] Study chemistry simulation after building enough math and modeling background.
 - [ ] Explore agentic coding through a small harness or repeatable coding workflow.
 - [ ] Review C and Rust when JavaScript experiments expose a useful reason to go lower level.
