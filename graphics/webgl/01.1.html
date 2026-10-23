@@ -1,0 +1,183 @@
+<html>
+<head>
+  <title>01 - hello world triangle!</title>
+<style>
+  body { width: 100%; height: 100%; background-color: #000; }
+  #canvas { width: 90%; aspect-ratio: 1; background-color: #001; margin-inline: auto;  }
+</style>
+</head>
+<body>
+  <canvas id="canvas" width="1280" height="720" >
+    gizmo.canvas
+  </canvas>
+
+  <script id="vertex-shader-2d" type="notjs">
+    // an attribute will receive data from a buffer
+    attribute vec4 a_position;
+     
+    // all shaders have a main function
+    void main() {
+   
+      // gl_Position is a special variable a vertex shader
+      // is responsible for setting
+      gl_Position = a_position;
+    }
+  </script>
+
+  <script id="fragment-shader-2d" type="notjs">
+  
+    // fragment shaders don't have a default precision so we need
+    // to pick one. mediump is a good default
+    precision mediump float;
+   
+    void main() {
+      // gl_FragColor is a special variable a fragment shader
+      // is responsible for setting
+      gl_FragColor = vec4(1, 0, 0.5, 1); // return reddish-purple
+    }
+
+  </script>
+  <script>
+    
+
+    (function(){
+      'use strict';
+
+      const log = console.log
+      const cvs = document.querySelector("#canvas")
+      
+      const gl = cvs.getContext("webgl")
+
+      if (!gl) {
+        log("webgl no supported")
+        return
+      }
+
+      // -- webgl
+
+      // -- setup
+
+      log("hello webgl!")
+
+      // --- shaders
+      const vertexShaderSource = document.querySelector("#vertex-shader-2d").text
+      const fragmentShaderSource = document.querySelector("#fragment-shader-2d").text
+
+      const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource)
+      const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource)
+
+      // --- program
+      const program = createProgram(gl, vertexShader, fragmentShader)
+
+
+
+      // --- lookups & buffers
+      const positionAttributeLocation = gl.getAttribLocation(program, "a_position") // -- a pointer to an attribute maybe? TODO: ask about this or find out
+
+      const positionBuffer = gl.createBuffer()
+      
+      // ---- bindings (much like binding reference?) //TODO: research more
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
+
+
+      // three 2d points
+      const positions = [
+        0, 0,
+        0, 0.5,
+        0.7, 0,
+      ]
+
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+      
+
+      // -- 🟢 rendering 
+      
+      // --- the proyection space (normalization maybe stuff here?) TODO: research more
+      gl.viewport(0, 0, gl.canvas.width, gl.canvas.height)
+
+
+      // Clear the canvas
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    
+
+      // Tell it to use our program (pair of shaders)
+      gl.useProgram(program);
+
+      // enable the buffer with binded to the attribute of a_location
+      gl.enableVertexAttribArray(positionAttributeLocation);
+
+
+      // -- weird stuff but is like an strategy to tell webgl to how to read the buffer. TODO: Validate this is true or not.
+      // Bind the position buffer.
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+
+      // Tell the attribute how to get data out of positionBuffer (ARRAY_BUFFER)
+      {
+        const size = 2;          // 2 components per iteration 
+        const type = gl.FLOAT;   // the data is 32bit floats
+        const normalize = false; // don't normalize the data TODO: Why not?
+        const stride = 0;        // 0 = move forward size * sizeof(type) each iteration to get the next position
+        const offset = 0;        // start at the beginning of the buffer
+
+        gl.vertexAttribPointer(
+            positionAttributeLocation, 
+            size, 
+            type, 
+            normalize, 
+            stride, 
+            offset
+            )
+      }
+
+
+
+      const primitiveType = gl.TRIANGLES;
+      const offset = 0;
+      const count = 3;
+      gl.drawArrays(primitiveType, offset, count);
+
+
+
+      // -- helpers
+      function createShader(gl, type, source) {
+        const shader = gl.createShader(type)
+
+        gl.shaderSource(shader, source)
+        gl.compileShader(shader)
+
+        const success = gl.getShaderParameter(shader, gl.COMPILE_STATUS)
+
+        if (success) {
+          return shader
+        }
+
+        log(gl.getShaderInfoLog(shader))
+        gl.deleteShader(shader)
+      }
+
+
+      function createProgram(gl, vertexShader, fragmentShader) {
+        const program = gl.createProgram()
+
+        gl.attachShader(program, vertexShader)
+        gl.attachShader(program, fragmentShader)
+        gl.linkProgram(program)
+
+        const success = gl.getProgramParameter(program, gl.LINK_STATUS)
+
+        if (success) {
+          return program
+        }
+
+        console.log(gl.getProgramInfoLog(program))
+        gl.deleteProgram(program)
+      }
+
+
+    })()
+  </script>
+</body>
+</html>
